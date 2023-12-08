@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %} <h1 class="mt-3"> Contact Form </h1> 
+{% load crispy_forms_tags %}
+<form class="w-50 h-75 m-5 p-3 rounded-3" style="background-color: bisque;" >
+{% csrf_token %}
+{{form | crispy}}
+
+<button type="submit" class="btn bg-warning">submit</button>
+</form>
+
+{% endblock %}
